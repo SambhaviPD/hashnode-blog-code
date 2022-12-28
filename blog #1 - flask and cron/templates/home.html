@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} Movie Recommender {% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <h2> Simple Movie Recommender &#127839; </h2>
+    </div>
+    <h4> Recommendations are sourced from the TMDB, the tv and movie database &#127916;</h3>
+    <hr>
+    {% for movie in movies %}
+    <div>
+        <h3>Movie Name: {{ movie[2] }} </h3>
+        <p>{{ movie[3] }} </p>
+    </div>
+{% endfor %}   
+{% endblock %}
