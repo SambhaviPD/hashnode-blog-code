@@ -1,0 +1,31 @@
+{
+  "name": "mybookreview-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite build --mode production --base /static/vue-dev --outDir ./src/static/vue-dev/ -w",
+    "build": "vite build --mode production --base /static/vue-prod --outDir ./src/static/vue-prod/",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "pinia": "^2.1.3",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.35.0",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/test-utils": "^2.3.2",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "jsdom": "^22.1.0",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.0"
+  }
+}
