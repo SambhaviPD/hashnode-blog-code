@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% for file in vue_css_paths %}
+            <link rel="stylesheet" href="{% static file %}"/>
+        {% endfor %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Book Review</title>
+    </head>
+    <body>
+        {% block content %}
+        
+        {% endblock %}
+        {% for file in vue_js_paths %}
+            <script src="{% static file %}"></script>
+        {% endfor %}
+    </body>
+</html>

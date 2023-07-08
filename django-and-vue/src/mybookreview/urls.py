@@ -18,7 +18,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 
+from . import views
+
 urlpatterns = [
+    path('', views.home_view, name="home"),
+    path('api/posts/', views.api_content_list_view, name="api_content_list"),
+    path('api/review/create/', views.api_review_create_view, name="api_review_create"),
     path("admin/", admin.site.urls),
 ]
 

@@ -4,8 +4,15 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 
-const app = createApp(App)
+const el = document.getElementById('app')
 
-app.use(createPinia())
+if (el) {
+    const data = {...el.dataset}
+    console.log('data: ', data)
+    const app = createApp(App, data)
+    app.use(createPinia())
+    app.mount('#app')
+}
 
-app.mount('#app')
+
+
